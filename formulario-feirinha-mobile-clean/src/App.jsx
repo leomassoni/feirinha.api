@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Alert, AlertDescription } from '@/components/ui/alert.jsx';
 import { Loader2, CheckCircle, AlertCircle, User, MapPin, Briefcase } from 'lucide-react'; // KeyRound não está sendo usado, removi
 
-const API_BASE_URL = 'http://localhost:5000/api/feirinha';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL + '/api/feirinha';
 
 const functionsBySector = {
   Bar: ['Ajudante de Bar', 'Bartender', 'Chefe de Bar'],
