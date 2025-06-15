@@ -1,0 +1,135 @@
+/* src/index.css - Este é o arquivo CSS principal do seu aplicativo */
+
+/* 1. Importações Essenciais do Tailwind CSS */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* 2. Importações de bibliotecas adicionais, como tw-animate-css (se estiver usando) */
+@import "tw-animate-css";
+
+/* 3. Variáveis de tema do ShadCN UI e estilos globais */
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --background: oklch(0.985 0 0); /* Cor de fundo principal para o tema claro */
+  --foreground: oklch(0.205 0 0); /* Cor do texto principal para o tema claro */
+  --card: oklch(1 0 0); /* Cor de fundo de cards para o tema claro */
+  --card-foreground: oklch(0.205 0 0); /* Cor do texto em cards para o tema claro */
+  --popover: oklch(1 0 0); /* Cor de fundo de popovers (dropdowns, tooltips) para o tema claro */
+  --popover-foreground: oklch(0.205 0 0); /* Cor do texto em popovers para o tema claro */
+  --primary: oklch(0.53 0.17 264); /* Cor primária (ex: botões) para o tema claro */
+  --primary-foreground: oklch(0.985 0 0); /* Cor do texto em elementos primários para o tema claro */
+  --secondary: oklch(0.97 0 0); /* Cor secundária para o tema claro */
+  --secondary-foreground: oklch(0.205 0 0); /* Cor do texto em elementos secundários para o tema claro */
+  --muted: oklch(0.97 0 0); /* Cor muted para o tema claro */
+  --muted-foreground: oklch(0.444 0 0); /* Cor do texto muted para o tema claro */
+  --accent: oklch(0.97 0 0); /* Cor de destaque para o tema claro */
+  --accent-foreground: oklch(0.205 0 0); /* Cor do texto em elementos de destaque para o tema claro */
+  --destructive: oklch(0.584 0.198 29.8); /* Cor destrutiva (ex: erro) para o tema claro */
+  --destructive-foreground: oklch(0.985 0 0); /* Cor do texto em elementos destrutivos para o tema claro */
+  --border: oklch(0.922 0 0); /* Cor de bordas para o tema claro */
+  --input: oklch(0.922 0 0); /* Cor de inputs para o tema claro */
+  --ring: oklch(0.53 0.17 264); /* Cor de foco/ring para o tema claro */
+
+  /* Variáveis específicas para sidebar (se aplicável, mantidas do seu código) */
+  --sidebar-background: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.205 0 0);
+  --sidebar-card: oklch(0.985 0 0);
+  --sidebar-card-foreground: oklch(0.205 0 0);
+  --sidebar-popover: oklch(0.985 0 0);
+  --sidebar-popover-foreground: oklch(0.205 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+/* Dark Theme (extraído do seu App.css) */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0); /* Cor de fundo de popovers para o tema escuro */
+  --popover-foreground: oklch(0.985 0 0); /* Cor do texto em popovers para o tema escuro */
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.584 0.198 29.8);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.922 0 0);
+  --chart-1: 10 74% 66%;
+  --chart-2: 81 74% 66%;
+  --chart-3: 200 74% 66%;
+  --chart-4: 300 74% 66%;
+  --chart-5: 42 74% 66%;
+}
+
+/* --- SOLUÇÃO FINAL: Forçar Cor de Fundo para o Dropdown --- */
+/*
+  Define um fundo branco sólido (ou a cor de sua preferência) para o dropdown.
+  Se você quiser que ele mude com o tema (claro/escuro), pode tentar usar
+  `var(--popover)` aqui, mas talvez precise ajustar as definições de `--popover`
+  para usar `rgb()` ou `hex` em vez de `oklch` se o problema persistir.
+*/
+[data-radix-popper-content-wrapper],
+[data-radix-popover-content],
+[data-radix-select-content],
+.select-content {
+  background-color: #ffffff !important; /* Cor de fundo BRANCA sólida */
+  border-color: var(--border) !important;
+  opacity: 1 !important;
+}
+
+/* Garante que os itens individuais também herdem o fundo */
+.select-content .select-item {
+  background-color: #ffffff !important; /* Fundo BRANCO para os itens */
+  color: var(--popover-foreground) !important;
+}
+
+/* Regra para sobrescrever bg-transparent se ele for injetado */
+.select-content.bg-transparent,
+[data-radix-popover-content].bg-transparent,
+[data-radix-select-content].bg-transparent {
+  background-color: #ffffff !important; /* Fundo BRANCO para sobrescrever bg-transparent */
+  opacity: 1 !important;
+}

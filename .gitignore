@@ -1,0 +1,6 @@
+# Ignora o arquivo de credenciais do Google Sheets
+feirinha-api-clean/src/credentials.json
+
+# Ignora arquivos de ambiente
+.env
+*/.env

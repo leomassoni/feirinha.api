@@ -1,4 +1,4 @@
-#!/home/leomassoni/solucao-feirinha-mobile-final/feirinha-api-clean/venv/bin/python3
+#!/home/leomassoni/solucao-feirinha-mobile-final/feirinha-api-clean/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
