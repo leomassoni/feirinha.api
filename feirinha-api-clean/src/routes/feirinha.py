@@ -146,7 +146,7 @@ def calculate_payment(function, day_of_week):
 
     # Dias de semana
     dias_semana_normal = ['quarta', 'quinta', 'sexta']
-    dias_semana_extra = ['sabado', 'domingo']
+    dias_semana_extra = ['sábado', 'domingo']
 
     paga = 0
 
